@@ -4,7 +4,7 @@ body {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  @apply bg-bg;
+  /* @apply bg-bg; */
 }
 
 body::-webkit-scrollbar {
@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(-50%);
   height: 4px;
   width: 100vw;
-  @apply bg-fun-pink;
+  background-color: rgb(202 138 4);
 }
 
 @media (max-width: 768px) {
@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb {
     transform: translate(-50%, -50%);
     height: 8px;
     width: 150px;
-    @apply bg-fun-pink;
+    background-color: rgb(202 138 4);
   }
 }
 
@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .heroElem .sqD:not(.squiggle-hero-pop1) {
-  animation: float 2s infinite ease-in-out;
+  animation: float 2s infinite linear;
 }
 
 .heroTitle .sqD {
@@ -158,4 +158,40 @@ body::-webkit-scrollbar-thumb {
 /* All svg squiggle decorations */
 .sqD {
   @apply absolute z-[-10];
+}
+
+@keyframes slide-forward {
+  0% {
+    transform: translateX(1%);
+  }
+
+  100% {
+    transform: translateX(-42%);
+  }
+}
+
+@keyframes slide-backward {
+  0% {
+    transform: translateX(-45%);
+  }
+
+  100% {
+    transform: translateX(1%);
+  }
+}
+
+.animate-slider {
+  animation: slide-forward 15s linear infinite alternate;
+}
+
+.animate-slider:hover {
+  animation-play-state: paused;
+}
+
+.animate-slider-opp {
+  animation: slide-backward 15s linear infinite alternate;
+}
+
+.animate-slider-opp:hover {
+  animation-play-state: paused;
 }

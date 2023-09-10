@@ -3,6 +3,7 @@ export interface IProject {
 	title: string;
 	desc: string;
 	img: string;
+	personal?: boolean;
 	link?: string;
 	github?: string;
 	tags: string[];
@@ -14,23 +15,12 @@ export interface IRoute {
 }
 
 export interface IFooterCol {
-	title: string;
-	links: {
-		name: string;
-		link: string;
-		icon?: string;
-		leavesWebsite: boolean;
-	}[];
+	name: string;
+	link: string;
+	icon?: string;
+	leavesWebsite: boolean;
 }
 
-export interface IFooter {
-	columns: IFooterCol[];
-	support: {
-		buymeacoffee: string;
-		paypal: string;
-		message: string;
-	};
-}
 export interface IProjectProps {
 	overwriteProjects?: IProject[];
 }

@@ -7,7 +7,8 @@ import React, { ReactChildren } from "react";
 function Layout({ currentPage, meta: { title, desc }, children }: IPageProps) {
 	const pageTitle = `${
 		currentPage === "Home"
-			? "Joshua Joseph - Software Developer [Javascript | TS | NodeJS | React | AWS]"
+			? // ? "Joshua Joseph - Software Developer [Javascript | TS | NodeJS | React | AWS]"
+			  "Joshua Joseph - Software Developer"
 			: `${currentPage} - codepriest.io`
 	}`;
 	return (
