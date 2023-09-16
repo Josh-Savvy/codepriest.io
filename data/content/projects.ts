@@ -48,8 +48,16 @@ const projects: IProject[] = [
 		desc: "A YouTube clone app",
 		img: "/assets/projects/youtube.png",
 		link: "https://youtube-clone-client.vercel.app/",
-		github: "https://github.com/braydentw/learn.theyei",
+		github: "https://github.com/Josh-Savvy/youtube_clone_client",
 		tags: ["React", "NextJS", "TailwindCSS", "TypeScript"],
+	},
+	{
+		id: 5,
+		title: "Notes App",
+		desc: "A simple-lightweight note-taking application.",
+		img: "/assets/projects/notes_app.png",
+		github: "https://github.com/Josh-Savvy/NOTY",
+		tags: ["React Native", "React", "React AsyncStorage", "TypeScript", "Expo"],
 	},
 ];
 
