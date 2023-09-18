@@ -57,5 +57,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [ƒ],
+  plugins: [],
 };
