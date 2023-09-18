@@ -57,7 +57,7 @@ const projects: IProject[] = [
 		desc: "A simple-lightweight note-taking application.",
 		img: "/assets/projects/notes_app.png",
 		github: "https://github.com/Josh-Savvy/NOTY",
-		tags: ["React Native", "React", "React AsyncStorage", "TypeScript", "Expo"],
+		tags: ["React Native", "React", "TypeScript", "Expo"],
 	},
 ];
 
