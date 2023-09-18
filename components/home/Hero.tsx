@@ -47,10 +47,7 @@ const Hero: FC = (): JSX.Element => {
 				<p className="text-2xl mb-16 max-w-[50%]">
 					A Software Developer.
 					<br />
-					<span className="text-lg">
-						I create meaningful digital solutions, and build products with an
-						optimized user experience.
-					</span>
+					<span className="text-lg">I create and build digital solutions.</span>
 				</p>
 				<ScrollLink
 					activeClass="active"
