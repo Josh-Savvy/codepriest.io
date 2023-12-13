@@ -11,10 +11,8 @@ const Projects: NextPage = (): React.JSX.Element => {
 			currentPage="Projects"
 			meta={{
 				title: "Projects",
-				desc:
-					"I love coding using tools like React, NextJS, Tailwind, and many more! Here are some of my favorite projects.",
-			}}
-		>
+				desc: "I love coding using tools like React, NextJS, Tailwind, and many more! Here are some of my favorite projects.",
+			}}>
 			<Heading />
 			<ProjectsList />
 			<More />

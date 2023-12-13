@@ -6,7 +6,7 @@ import { IProject } from "interfaces";
 
 function ProjectCard({ project }: { project: IProject }) {
 	return (
-		<div className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center max-h-[350px]">
+		<div className="md:my-6 max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center max-h-[350px]">
 			<a
 				href={project.link || project.github || "#"}
 				target="_blank"
@@ -36,8 +36,8 @@ function ProjectCard({ project }: { project: IProject }) {
 					<a href={project.link || project.github} target="_blank">
 						<h3 className="text-lg font-bold">{project.title}</h3>
 					</a>
-					{project.personal && (
-						<p className="text-xs bg-yellow-900 cursor-default duration-300 p-0.5 px-3 rounded">Personal</p>
+					{!project.personal && (
+						<p className="text-xs bg-yellow-900 cursor-default duration-300 p-0.5 px-3 rounded">Official</p>
 					)}
 					<div className="space-x-2">
 						{project.link && (
