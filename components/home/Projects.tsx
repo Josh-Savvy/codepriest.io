@@ -11,7 +11,7 @@ const Projects = () => {
 			<div id="learnmore">
 				<SectionTitle title="Here are highlights of my favorite projects." />
 			</div>
-			<div className="grid sm:grid-cols-2 gap-12 md:gap-5 items-start">
+			<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-5 items-start">
 				{projects.slice(0, 3).map((item) => {
 					return <ProjectCard key={item.id} project={item} />;
 				})}

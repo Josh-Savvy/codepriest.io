@@ -10,10 +10,10 @@ function ProjectCard({ project }: { project: IProject }) {
 			<a
 				href={project.link || project.github || "#"}
 				target="_blank"
-				className={`w-full relative rounded-xl border-fun-gray border overflow-hidden md:min-h-[200px] md:max-h-[200px] p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-yellow-600 will-change-projectCard`}>
+				className={`w-full h-full relative rounded-xl border-fun-gray border overflow-hidden md:min-h-[200px] md:max-h-[200px] p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-yellow-600 will-change-projectCard`}>
 				{project.img ? (
 					<img
-						className="w-full rounded-md h-full md:min-h-[200px]"
+						className="w-full h-full rounded-md h-full md:min-h-[200px]"
 						src={project.img || "/assets/svgs/image_not_found.svg"}
 					/>
 				) : (

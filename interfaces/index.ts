@@ -24,3 +24,15 @@ export interface IFooterCol {
 export interface IProjectProps {
 	overwriteProjects?: IProject[];
 }
+
+export type Skill = {
+	title: string;
+	icon: string;
+	style?: object;
+};
+
+export type Testimonial = {
+	quote: string;
+	name: string;
+	role: string;
+};
