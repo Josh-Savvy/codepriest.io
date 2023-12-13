@@ -6,12 +6,11 @@ import { IProject } from "interfaces";
 
 function ProjectCard({ project }: { project: IProject }) {
 	return (
-		<div className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center">
+		<div className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center max-h-[350px]">
 			<a
-				href={project.link || project.github}
+				href={project.link || project.github || "#"}
 				target="_blank"
-				className={`w-full relative rounded-xl border-fun-gray border overflow-hidden md:min-h-[200px] md:max-h-[200px] p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-yellow-600 will-change-projectCard`}
-			>
+				className={`w-full relative rounded-xl border-fun-gray border overflow-hidden md:min-h-[200px] md:max-h-[200px] p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-yellow-600 will-change-projectCard`}>
 				{project.img ? (
 					<img
 						className="w-full rounded-md h-full md:min-h-[200px]"
@@ -38,29 +37,17 @@ function ProjectCard({ project }: { project: IProject }) {
 						<h3 className="text-lg font-bold">{project.title}</h3>
 					</a>
 					{project.personal && (
-						<p className="text-xs bg-yellow-900 cursor-default duration-300 p-0.5 px-3 rounded">
-							Personal
-						</p>
+						<p className="text-xs bg-yellow-900 cursor-default duration-300 p-0.5 px-3 rounded">Personal</p>
 					)}
 					<div className="space-x-2">
 						{project.link && (
 							<a href={project.link} target="_blank" rel="noreferrer">
-								<Image
-									src="/assets/icons/external-link.svg"
-									width={16}
-									height={16}
-									alt="Link Icon"
-								/>
+								<Image src="/assets/icons/external-link.svg" width={16} height={16} alt="Link Icon" />
 							</a>
 						)}
 						{project.github && (
 							<a href={project.github} target="_blank" rel="noreferrer">
-								<Image
-									src="/assets/icons/github.svg"
-									width={16}
-									height={16}
-									alt="Github Icon"
-								/>
+								<Image src="/assets/icons/github.svg" width={16} height={16} alt="Github Icon" />
 							</a>
 						)}
 					</div>
@@ -70,7 +57,7 @@ function ProjectCard({ project }: { project: IProject }) {
 					{project.tags.map((tag, index) => {
 						return (
 							<li key={tag}>
-								<Link href={`/projects/tag/${kebabCase(tag)}`}>
+								<Link prefetch={false} href={`/projects/tag/${kebabCase(tag)}`}>
 									<div className="m-1 rounded-lg text-sm bg-fun-pink-dark py-1 px-2 cursor-pointer hover:opacity-75">
 										{tag}
 									</div>

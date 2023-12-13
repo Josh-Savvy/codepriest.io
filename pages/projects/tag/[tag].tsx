@@ -26,27 +26,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	};
 };
 
-export const getStaticProps = async ({
-	params,
-}: {
-	params: { tag: string };
-}) => {
+export const getStaticProps = async ({ params }: { params: { tag: string } }) => {
 	const tag = params?.tag;
-	const filteredProjects = await projects.filter((project) =>
-		[...kebabArray(project.tags)].includes(tag),
-	);
+	const filteredProjects = await projects.filter((project) => [...kebabArray(project.tags)].includes(tag));
 	return {
 		props: { filteredProjects, tag },
 	};
 };
 
-const ProjectWithTag = ({
-	filteredProjects,
-	tag,
-}: {
-	filteredProjects: any[];
-	tag: string;
-}) => {
+const ProjectWithTag = ({ filteredProjects, tag }: { filteredProjects: any[]; tag: string }) => {
 	const capsTag = allTags[allKebabTags.indexOf(tag)];
 	return (
 		<Layout
@@ -54,12 +42,11 @@ const ProjectWithTag = ({
 			meta={{
 				title: `${capsTag} Projects`,
 				desc: `A showcase for all of my ${capsTag} projects.`,
-			}}
-		>
+			}}>
 			<Heading tag={capsTag} />
 			<Projects overwriteProjects={filteredProjects} />
 
-			<Link href="/projects">
+			<Link  href="/projects" prefetch={false}>
 				<div className="mt-8 max-w-sm md:max-w-2xl border border-fun-pink mx-auto text-center w-full whitespace-nowrap px-8 py-3 rounded-full text-fun-pink bg-fun-pink-darkerer hover:bg-fun-pink hover:text-white transition-colors cursor-pointer">
 					View All
 				</div>

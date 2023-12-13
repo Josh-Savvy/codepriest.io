@@ -12,8 +12,7 @@ const Navbar = ({ currentPage }: { currentPage: string }): JSX.Element => {
 							return (
 								<span
 									key={index}
-									className="hover:text-yellow-600 hover:-mt-2 transition-all duration-500 hover:duration-100"
-								>
+									className="hover:text-yellow-600 hover:-mt-2 transition-all duration-500 hover:duration-100">
 									{letter}
 								</span>
 							);
@@ -30,9 +29,10 @@ const Navbar = ({ currentPage }: { currentPage: string }): JSX.Element => {
 								currentPage === item.title
 									? "opacity-100"
 									: "opacity-40 hover:opacity-100 transition-opacity"
-							}`}
-						>
-							<Link href={item.path}>{item.title}</Link>
+							}`}>
+							<Link href={item.path} prefetch={false}>
+								{item.title}
+							</Link>
 						</li>
 					);
 				})}
