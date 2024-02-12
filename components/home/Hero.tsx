@@ -6,14 +6,11 @@ const Hero: FC = (): JSX.Element => {
 		<>
 			<div
 				className="relative heroElem w-full pt-20 pb-40 m-auto flex justify-center text-center flex-col items-center z-1"
-				style={{ maxWidth: "1200px" }}
-			>
+				style={{ maxWidth: "1200px" }}>
 				<p className="text-2xl mb-5">Hello there.</p>
 				<h1 className="heroTitle min-w-[80vw] inline-block max-w-2xl lg:max-w-4xl  w-auto relative text-4xl md:text-5xl lg:text-6xl tracking-tighter mb-5 font-bold heroShinyBg">
 					I'm
-					<span className="ml-5 uppercase heroShiny1 text-yellow-600 tracking-wide">
-						Joshua Joseph <br /> (CodePriest)
-					</span>
+					<span className="ml-5 uppercase heroShiny1 text-yellow-600 tracking-wide">Joshua Joseph</span>
 					<img
 						className="sqD squiggle-hero-html w-16 top-[-90px] right-[5%] sm:top-[-90px] sm:right-0"
 						style={{ animationDelay: "0.1s" }}
@@ -49,14 +46,7 @@ const Hero: FC = (): JSX.Element => {
 					<br />
 					<span className="text-lg">I create and build digital solutions.</span>
 				</p>
-				<ScrollLink
-					activeClass="active"
-					to="learnmore"
-					spy={true}
-					offset={-30}
-					smooth={true}
-					duration={500}
-				>
+				<ScrollLink activeClass="active" to="learnmore" spy={true} offset={-30} smooth={true} duration={500}>
 					<div className="cursor-pointer font-bold whitespace-nowrap duration-300 px-10 py-4 text-white border-2 hover:border-yellow-600 text-xl rounded-full border-white hover:bg-yellow-600 transition-colors">
 						Explore
 					</div>
