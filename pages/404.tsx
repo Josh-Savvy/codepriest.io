@@ -18,7 +18,7 @@ function Page404() {
 					<p className="text-fun-gray text-xl mt-8 flex items-center">
 						Sorry, looks like that page is missing!&nbsp;&nbsp;
 						<Link prefetch={false} href="/">
-							<span className="w-full sm:w-auto flex-shrink border border-fun-pink-light text-base px-4 py-1 rounded-xl text-yellow-600 bg-fun-pink-darkerer hover:bg-fun-pink hover:text-white transition-colors cursor-pointer">
+							<span className="w-full sm:w-auto flex-shrink border border-fun-pink-light text-base px-4 py-1 rounded-xl text-yellow-600 bg-fun-pink-darkerer hover:bg-yellow-600 hover:text-black transition-colors cursor-pointer">
 								Return Home
 							</span>
 						</Link>
