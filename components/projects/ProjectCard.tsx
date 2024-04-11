@@ -13,7 +13,7 @@ function ProjectCard({ project }: { project: IProject }) {
 				className={`w-full h-full relative rounded-xl border-fun-gray border overflow-hidden md:min-h-[200px] md:max-h-[200px] p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-yellow-600 will-change-projectCard`}>
 				{project.img ? (
 					<img
-						className="w-full h-full rounded-md h-full md:min-h-[200px]"
+						className="w-full rounded-md h-full md:min-h-[200px]"
 						src={project.img || "/assets/svgs/image_not_found.svg"}
 					/>
 				) : (
@@ -36,9 +36,9 @@ function ProjectCard({ project }: { project: IProject }) {
 					<a href={project.link || project.github} target="_blank">
 						<h3 className="text-lg font-bold">{project.title}</h3>
 					</a>
-					{!project.personal && (
+					{/* {!project.personal && (
 						<p className="text-xs bg-yellow-900 cursor-default duration-300 p-0.5 px-3 rounded">Official</p>
-					)}
+					)} */}
 					<div className="space-x-2">
 						{project.link && (
 							<a href={project.link} target="_blank" rel="noreferrer">

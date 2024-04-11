@@ -18,7 +18,7 @@ const Projects = () => {
 			</div>
 			<div className="relative w-full mt-2">
 				<Link href="/projects" prefetch={false}>
-					<div className="mt-8 max-w-sm md:max-w-2xl border border-white duration-300 hover:border-yellow-600 mx-auto text-center w-full whitespace-nowrap px-8 py-3 rounded-full text:white hover:border-yellow-600 hover:bg-yellow-600 text-white transition-colors cursor-pointer">
+					<div className="mt-8 max-w-sm md:max-w-2xl border border-white duration-300 hover:border-yellow-600 mx-auto text-center w-full whitespace-nowrap px-8 py-3 rounded-full text:white hover:bg-yellow-600 text-white transition-colors cursor-pointer">
 						View All
 					</div>
 				</Link>
